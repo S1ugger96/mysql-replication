@@ -12,20 +12,20 @@
 
 ## Задание 2 — Конфигурация Master-Slave репликации
 
-### Скрин 1 — zadanie2_sc1.png
+![скрин1](zadanie2_sc1.png)
 Статус мастера: бинлог `mysql-bin.000003`, позиция 839, репликация настроена на базу `testdb`.
 
-### Скрин 2 — zadanie2_sc2.png
+![скрин1](zadanie2_sc2.png)
 Статус слейва: `Slave_IO_Running: Yes`, `Slave_SQL_Running: Yes`, отставание 0 секунд — репликация работает.
 
-### Скрин 3 — zadanie2_sc3.png
+![скрин1](zadanie2_sc3.png)
 На мастере создана таблица `users` и добавлена запись `(1, 'Willard')`.
 
-### Скрин 4 — zadanie2_sc4.png
+![скрин1](zadanie2_sc4.png)
 На слейве выполнен `SELECT * FROM users` — данные реплицировались автоматически.
 
-### Скрин 5 — zadanie2_sc5.png
+![скрин1](zadanie2_sc5.png)
 Финальный статус мастера: позиция обновилась до 1361 после записи данных.
 
-### Скрин 6 — zadanie2_sc6.png
+![скрин1](zadanie2_sc6.png)
 Финальный статус слейва: `Slave_IO_Running: Yes`, `Slave_SQL_Running: Yes`, позиция синхронизирована с мастером (1361).
